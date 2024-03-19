@@ -38,6 +38,10 @@ const items = [
 
 // Omit the 'age' element
 
-const person = Object.fromEntries(items.filter(([key]) => key !== 'age'))
-
-test("Problem 4", person)
+const person = items.filter(item => item[0] !== 'age')
+					.reduce((obj, [key, value]) => {
+    	obj[key] = value;
+		return obj;
+	}, {})
+	console.log(person)
+//test("Problem 4", person)
