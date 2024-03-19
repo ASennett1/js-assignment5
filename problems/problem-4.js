@@ -43,5 +43,5 @@ const person = items.filter(item => item[0] !== 'age')
     	obj[key] = value;
 		return obj;
 	}, {})
-	console.log(person)
-//test("Problem 4", person)
+	
+test("Problem 4", person)
