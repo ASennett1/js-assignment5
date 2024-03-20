@@ -31,9 +31,13 @@ const numbers = [ -10, -5, 0, 5, 10, 8, -2 ]
 
 const numberStrings = numbers // append your array methods here
 	.filter(number => number > 0 && number !== 0)
-	.map(number => `${number} is ${isEven(number) ? 'even' : 'odd'}`) 
-	.sort(function (a, b) { 
-		return a.length - b.length; 
+	.sort((a,b) => a-b)
+	.map((num) => {
+		if(isEven(num)){
+			return num + " is even"
+		}else{
+			return num + " is odd"
+		}
 	})
-
+	
 test("Problem 3", numberStrings)
